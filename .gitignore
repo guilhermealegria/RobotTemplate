@@ -1,7 +1,13 @@
+#Arquivos  de cache
+/Resources/PageObject/Elements/__pycache__/*.pyc
+/Resources/PageObject/TestData/__pycache__/*.pyc
+
 #Vscode
 .DS_Store
 
 #Relatórios HTML
-* .html
-* .xml
-* .png
+/Results/*.png
+/Results/log.html
+/Results/output.xml
+/Results/report.html
+
