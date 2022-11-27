@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.1 (Python 3.11.0 on darwin)" generated="20221107 21:47:22.819" rpa="false" schemaversion="3">
+<suite id="s1" name="TestUI" source="/Users/alegria/RobotTemplate/Tests/TestUI.robot">
+<test id="s1-t1" name="Verificar acesso a pagina do google" line="10">
+<kw name="Abrir Navegador" library="Commands">
+<arg>${Url}</arg>
+<arg>Chrome</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${site_url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221107 21:47:23.320" level="INFO">Opening browser 'Chrome' to base url 'https://www.google.com.br/'.</msg>
+<status status="PASS" starttime="20221107 21:47:23.319" endtime="20221107 21:47:27.371"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>name:q</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221107 21:47:27.371" endtime="20221107 21:47:27.428"/>
+</kw>
+<status status="PASS" starttime="20221107 21:47:23.318" endtime="20221107 21:47:27.428"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${Url}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20221107 21:47:27.481" level="INFO">Current location is 'https://www.google.com.br/'.</msg>
+<status status="PASS" starttime="20221107 21:47:27.428" endtime="20221107 21:47:27.481"/>
+</kw>
+<status status="PASS" starttime="20221107 21:47:23.317" endtime="20221107 21:47:27.481"/>
+</test>
+<status status="PASS" starttime="20221107 21:47:22.821" endtime="20221107 21:47:27.482"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="TestUI">TestUI</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20221107 21:47:23.316" level="WARN">Imported resource file '/Users/alegria/RobotTemplate/Resources/PageObject/KeywordDefinationFiles/PaginaTestUI.robot' is empty.</msg>
+</errors>
+</robot>

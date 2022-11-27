@@ -6,8 +6,5 @@
 .DS_Store
 
 #Relatórios HTML
-/Results/*.png
-/Results/log.html
-/Results/output.xml
-/Results/report.html
+/Reports/*.png
 
