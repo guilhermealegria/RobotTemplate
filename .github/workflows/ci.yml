@@ -17,7 +17,7 @@ jobs:
           run: |
             docker run \
               -v /RobotTemplate/Reports:/opt/robotframework/reports:Z \
-              -v /RobotTemplate/Tests:/opt/robotframework/tests:Z \
+              -v /RobotTemplate/Tests/TestUI.robot:/opt/robotframework/tests:Z \
               --user $(id -u):$(id -g) \
               ppodgorsek/robot-framework:latest
         
