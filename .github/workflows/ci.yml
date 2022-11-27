@@ -16,8 +16,8 @@ jobs:
           # configure -e ROBOT_OPTIONS according to yout tests, or remove it if no special configuration is needed  
           run: |
             docker run \
-              -v ${PWD}/results:/opt/robotframework/Results:Z \
-              -v ${PWD}/tests:/opt/robotframework/Tests:Z \
+              -v ${PWD}/results:/RobotTemplate/Results\
+              -v ${PWD}/tests:/RobotTemplate/Tests\
               --user $(id -u):$(id -g) \
               ppodgorsek/robot-framework:latest
         
