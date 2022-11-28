@@ -1,7 +1,7 @@
 name: CI Robot Framework Tests
 on: [push]
 jobs:
-    run_tests:
+    robot_test:
         runs-on: ubuntu-20.04
         steps:
         # checkout code from a repository
