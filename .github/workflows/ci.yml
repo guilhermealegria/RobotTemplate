@@ -1,12 +1,12 @@
-#name: CI Robot Framework Tests
-#on: [push]
-#jobs:
-    robot_test:
+name: CI Robot Framework Tests
+on: [push]
+jobs:
+    run_tests:
         runs-on: ubuntu-20.04
         steps:
         # checkout code from a repository
         - name: Checkout
-        - uses: actions/checkout@v2
+        - uses: actions/checkout@v3
         # run Robot Framework tests inside Docker container
         - name: Run Robot Framework Tests
           # container used here is ppodgorsek/robot-framework:latest
@@ -15,12 +15,11 @@
           # it is required that GitHub repository contains folder "reports". Commit some file inside "reports" to create it
           # place tests in folder tests or change docker run command accordingly
           # configure -e ROBOT_OPTIONS according to yout tests, or remove it if no special configuration is needed  
-         - uses: joonvena/robotframework-docker-action@v1.0
           
-          #run: |
-          #  docker run \
-          #    -v /RobotTemplate/Reports:/opt/robotframework/reports:Z \
-          #    -v /RobotTemplate/Tests/TestUI.robot:/opt/robotframework/tests:Z \
-          #    --user $(id -u):$(id -g) \
-          #    ppodgorsek/robot-framework:latest
+          run: |
+          docker run \
+            -v /RobotTemplate/Reports:/opt/robotframework/reports:Z \
+            -v /RobotTemplate/Tests:/opt/robotframework/tests:Z \
+            --user $(id -u):$(id -g) \
+            ppodgorsek/robot-framework:latest
         
