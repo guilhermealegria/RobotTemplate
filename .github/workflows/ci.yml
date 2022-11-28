@@ -1,12 +1,12 @@
-name: CI Robot Framework Tests
-on: [push]
-jobs:
+#name: CI Robot Framework Tests
+#on: [push]
+#jobs:
     robot_test:
         runs-on: ubuntu-20.04
         steps:
         # checkout code from a repository
         - name: Checkout
-        - uses: actions/checkout@v3
+        - uses: actions/checkout@v2
         # run Robot Framework tests inside Docker container
         - name: Run Robot Framework Tests
           # container used here is ppodgorsek/robot-framework:latest
